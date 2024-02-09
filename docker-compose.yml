@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+      - type: volume
+        source: node_modules
+        target: /app/node_modules
+        volume:
+          nocopy: true
+      - type: volume
+        source: yarn_cache
+        target: /var/cache/yarn
+        volume:
+          nocopy: true
+
+volumes:
+  node_modules:
+  yarn_cache:

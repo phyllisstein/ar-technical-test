@@ -1,0 +1,21 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true,
+    "/.next": true
+  },
+  "prettier.enable": true,
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "editor.tabSize": 2
+}

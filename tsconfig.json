@@ -1,0 +1,72 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "jsx": "preserve",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "paths": {
+      "*": [
+        "*",
+        "src/*",
+        "vendor/*",
+        "test/*",
+        "node_modules/*"
+      ]
+    },
+    "removeComments": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "target": "es2020",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
+  },
+  "include": [
+    "./*.ts",
+    "./*.d.ts",
+    "./bin/**/*.d.ts",
+    "./bin/**/*.ts",
+    "./bin/**/*.tsx",
+    "./lib/**/*.d.ts",
+    "./lib/**/*.ts",
+    "./lib/**/*.tsx",
+    "./src/**/*.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./test/**/*.d.ts",
+    "./test/**/*.ts",
+    "./test/**/*.tsx",
+    "./test/**/*.tsx",
+    "./vendor/**/*.d.ts",
+    "./vendor/**/*.ts",
+    "./vendor/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "typeAcquisition": {
+    "enable": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
