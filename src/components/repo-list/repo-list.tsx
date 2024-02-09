@@ -11,7 +11,7 @@ export const RepoList = ({ children }: RepoListProps) => {
         List of repositories
       </h2>
       <div
-        className='grid grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr_auto] grid-rows-[2rem_1fr] gap-y-1'
+        className='grid grid-cols-[1fr_auto] md:grid-cols-[2fr_3fr_auto] grid-rows-[auto_1fr] gap-y-1'
         role='table'
         aria-describedby='a11y-description'>
         <div className='contents' role='row'>
