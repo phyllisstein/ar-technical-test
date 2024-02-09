@@ -28,16 +28,27 @@ export const fetchRepos = async (
   _previousState: FormState,
   formData: FormData,
 ): Promise<FetchResult> => {
-  'use server'
+  const owner = formData?.get('owner')
+  const stars = formData?.get('stars') as string
+  const sort = formData?.get('sort') as string
+  const order = formData?.get('order') as string
+  const license = formData?.get('license') as string
 
-  const query = formData?.get('query')
-
-  if (typeof query !== 'string') {
+  if (typeof owner !== 'string') {
     return {
       error: 'Invalid query',
       success: false,
     }
   }
+
+  const searchString = [
+    `user:${owner}`,
+    stars && `stars:>=${stars}`,
+    sort && `sort:${sort}-${order}`,
+    license && `license:${license}`,
+  ]
+    .filter(Boolean)
+    .join(' ')
 
   const response = await axios.request<Response>({
     method: 'GET',
@@ -47,7 +58,7 @@ export const fetchRepos = async (
       'X-GitHub-Api-Version': '2022-11-28',
     },
     params: {
-      q: query,
+      q: searchString,
     },
   })
 
