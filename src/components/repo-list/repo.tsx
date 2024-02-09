@@ -7,7 +7,7 @@ interface RepoProps {
   url: string
 }
 
-export function Repo({ children, description, stars, url }: RepoProps) {
+export const Repo = ({ children, description, stars, url }: RepoProps) => {
   return (
     <div className='contents' role='row'>
       <div role='cell'>

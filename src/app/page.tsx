@@ -6,7 +6,7 @@ import { Repo, RepoList } from 'components/repo-list'
 
 import { fetchRepos, type FetchResult } from './actions'
 
-function Home() {
+const Home = () => {
   // @ts-expect-error: Types out of date
   const [state, dispatch] = useFormState<FetchResult>(fetchRepos, {
     query: '',

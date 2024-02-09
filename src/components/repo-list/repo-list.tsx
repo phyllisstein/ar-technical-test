@@ -4,7 +4,7 @@ interface RepoListProps {
   children: ReactNode
 }
 
-export function RepoList({ children }: RepoListProps) {
+export const RepoList = ({ children }: RepoListProps) => {
   return (
     <>
       <h2 id='a11y-description' className='sr-only'>
