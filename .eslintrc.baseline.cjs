@@ -96,7 +96,7 @@ module.exports = {
     ecmaVersion: 2022,
     sourceType: 'module',
   },
-  plugins: ['import', '@next/eslint-plugin-next'],
+  plugins: ['import', '@next/eslint-plugin-next', 'jest'],
   root: true,
   rules: {
     'arrow-parens': ['warn', 'as-needed'],

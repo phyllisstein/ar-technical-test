@@ -12,7 +12,6 @@ module.exports = {
   },
   plugins: ['import', 'jsx-a11y', 'react', 'react-hooks'],
   rules: {
-    'react/jsx-closing-bracket-location': ['warn', 'after-props'],
     'react/jsx-curly-newline': ['warn', 'consistent'],
     'react/jsx-sort-props': [
       'warn',
