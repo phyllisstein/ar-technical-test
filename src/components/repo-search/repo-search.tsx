@@ -1,8 +1,10 @@
-'use client'
+import { MouseEventHandler, useState } from 'react'
 
-import { useState } from 'react'
+interface RepoSearchProps {
+  onSubmit: MouseEventHandler<HTMLButtonElement>
+}
 
-export const RepoSearch = () => {
+export const RepoSearch = ({ onSubmit }: RepoSearchProps) => {
   const [owner, setOwner] = useState('')
 
   return (
@@ -16,13 +18,14 @@ export const RepoSearch = () => {
           name='owner'
           type='search'
           placeholder='octocat'
-          onChange={e => setOwner(e.target.value)}
+          onChange={event => setOwner(event.target.value)}
         />
       </label>
       <button
         className='basis-4 rounded-md m-1 bg-sky-500 px-2 py-1 text-neutral-50 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring-sky-300 disabled:bg-zinc-200 disabled:text-neutral-500'
         type='submit'
-        disabled={owner === ''}>
+        disabled={owner === ''}
+        onClick={onSubmit}>
         Search
       </button>
     </div>
