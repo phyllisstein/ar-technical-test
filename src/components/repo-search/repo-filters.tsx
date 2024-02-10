@@ -1,7 +1,11 @@
+import { useState } from 'react'
+
 export const RepoFilters = () => {
+  const [sortBy, setSortBy] = useState('')
+
   return (
     <details className='flex md:block mb-8'>
-      <summary>
+      <summary className='select-none'>
         <span className='text-neutral-500'>Filters</span>
       </summary>
       <label className='inline-flex items-center p-2'>
@@ -10,8 +14,9 @@ export const RepoFilters = () => {
         </span>
         <select
           className='rounded-md border-zinc-200 border-2 items-stretch grow m-1 hover:border-sky-300 focus:outline-none focus:border-sky-400 outline-none px-2 py-1'
-          name='sort'>
-          <option value=''>Best match</option>
+          name='sort'
+          onChange={e => setSortBy(e.target.value)}>
+          <option value=''>Stars</option>
           <option value='updated'>Last Updated</option>
         </select>
       </label>
@@ -20,8 +25,9 @@ export const RepoFilters = () => {
           Order
         </span>
         <select
-          className='rounded-md border-zinc-200 border-2 items-stretch grow m-1 hover:border-sky-300 focus:outline-none focus:border-sky-400 outline-none px-2 py-1'
-          name='order'>
+          className='rounded-md border-zinc-200 border-2 items-stretch grow m-1 disabled:hover:border-zinc-200 hover:border-sky-300 focus:outline-none focus:border-sky-400 outline-none px-2 py-1'
+          name='order'
+          disabled={sortBy === ''}>
           <option value='desc'>Descending</option>
           <option value='asc'>Ascending</option>
         </select>
