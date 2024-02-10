@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   extends: [
     'eslint:recommended',
@@ -23,6 +24,7 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       parserOptions: {
         project: './tsconfig.json',
+        // eslint-disable-next-line no-undef
         tsconfigRootDir: __dirname,
       },
       plugins: ['@typescript-eslint'],
@@ -126,6 +128,7 @@ module.exports = {
     ],
     indent: 'off',
     'jsx-quotes': ['warn', 'prefer-single'],
+    'no-extra-semi': 'off',
     'no-inner-declarations': 'off',
     'no-multiple-empty-lines': [
       'warn',

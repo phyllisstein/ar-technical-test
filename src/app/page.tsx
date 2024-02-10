@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div>
       <main className='p-4'>
-        <form action={dispatch} className='flex flex-col' ref={formRef}>
+        <form ref={formRef} action={dispatch} className='flex flex-col'>
           <RepoSearch
             onSubmit={e => {
               if (!formRef.current || !pageRef.current) return
@@ -34,8 +34,8 @@ const Home = () => {
           <RepoFilters />
           <button
             className='basis-4 rounded-md m-1 bg-sky-500 px-2 py-1 text-neutral-50 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring-sky-300 disabled:bg-zinc-200 disabled:text-neutral-500'
-            type='button'
             disabled={!state.prev}
+            type='button'
             onClick={e => {
               if (!formRef.current || !pageRef.current) return
 
@@ -47,8 +47,8 @@ const Home = () => {
           </button>
           <button
             className='basis-4 rounded-md m-1 bg-sky-500 px-2 py-1 text-neutral-50 hover:bg-sky-600 active:bg-sky-700 focus:outline-none focus:ring-sky-300 disabled:bg-zinc-200 disabled:text-neutral-500'
-            type='button'
             disabled={!state.next}
+            type='button'
             onClick={e => {
               if (!formRef.current || !pageRef.current) return
 
@@ -58,7 +58,7 @@ const Home = () => {
             }}>
             Next
           </button>
-          <input ref={pageRef} type='hidden' name='page' />
+          <input ref={pageRef} name='page' type='hidden' />
         </form>
         {state?.success && (
           <RepoList>

@@ -11,23 +11,13 @@
     "moduleResolution": "node",
     "outDir": "./dist",
     "paths": {
-      "*": [
-        "*",
-        "src/*",
-        "vendor/*",
-        "test/*",
-        "node_modules/*"
-      ]
+      "*": ["*", "src/*", "vendor/*", "test/*", "node_modules/*"]
     },
     "removeComments": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "target": "es2020",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
@@ -66,5 +56,5 @@
   "typeAcquisition": {
     "enable": true
   },
-  "exclude": ["node_modules", "**/*.test.*"]
+  "exclude": ["node_modules"]
 }

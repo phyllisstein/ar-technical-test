@@ -1,5 +1,9 @@
-import { fetchRepos, parseLinkHeader } from './actions'
+/* eslint-disable @typescript-eslint/unbound-method */
+
 import axios from 'axios'
+
+import { fetchRepos, parseLinkHeader } from './actions'
+
 import MockedFunction = jest.MockedFunction
 
 jest.mock('axios')
