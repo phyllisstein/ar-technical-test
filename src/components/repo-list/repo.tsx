@@ -10,7 +10,7 @@ interface RepoProps {
 export const Repo = ({ children, description, stars, url }: RepoProps) => {
   return (
     <div className='contents' role='row'>
-      <div role='cell m-2 md:m-4'>
+      <div className='cell m-2 md:m-4'>
         <a href={url} className='hover:underline hover:text-blue-600'>
           {children}
         </a>
